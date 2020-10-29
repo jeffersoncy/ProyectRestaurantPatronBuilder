@@ -55,7 +55,7 @@ public class ItalianDishBuilder extends DishBuilder {
   }
     @Override
     public DishBuilder init() {
-      myRepository = new ProductRepositoryImplArrays();
+      myRepository = new ProductRepositoryImplArrays("Italian");
       myDish = new ItalianDish(0.0);
       myItalianDish = (ItalianDish) myDish;
       //Obtenemos todos los productos

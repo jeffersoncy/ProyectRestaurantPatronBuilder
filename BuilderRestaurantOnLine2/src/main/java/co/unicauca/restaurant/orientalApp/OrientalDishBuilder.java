@@ -53,7 +53,7 @@ public class OrientalDishBuilder extends DishBuilder {
 
     @Override
     public DishBuilder init() { 
-      myRepository = new ProductRepositoryImplArrays();
+      myRepository = new ProductRepositoryImplArrays("Oriental");
       myDish = new OrientalDish(0.0);
       myOrientalDish = (OrientalDish) myDish;
       //Obtenemos todos los productos

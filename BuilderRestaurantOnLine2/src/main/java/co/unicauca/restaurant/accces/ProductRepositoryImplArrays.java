@@ -18,18 +18,35 @@ public class ProductRepositoryImplArrays implements IProductRepository {
 */
     public static List<Product> products;
     
-    public ProductRepositoryImplArrays(){
+    public ProductRepositoryImplArrays(String tipo){
         products = new ArrayList<>();
-        initialize();
+        if(tipo=="Oriental")
+        {
+            initializeOrientalDish();
+        }
+        else if(tipo=="Italian")
+        {
+            initializeItalianDish();
+        }
     }
     
-    private void initialize() {
+    private void initializeOrientalDish() {
         products.add(new Product(1, "Shop Suey", 5000d));
         products.add(new Product(2, "Arroz Oriental", 5500d));
         products.add(new Product(3, "Pasta con Verduras", 5000d));
-         products.add(new Product(4, "Pollo Agridulce", 5800d));
+        products.add(new Product(4, "Pollo Agridulce", 5800d));
         products.add(new Product(5, "Cerdo Tropical", 6900d));
         products.add(new Product(6, "Res Teriyaki", 6200d));
+        
+    }
+    
+    private void initializeItalianDish() {
+        products.add(new Product(1, "Milanesa Bambini", 18000d));
+        products.add(new Product(2, "Carpaccio", 12000d));
+        products.add(new Product(3, "Lasagna de Pollo", 17500d));
+        products.add(new Product(4, "Pizza de la casa-porcion", 9500d));
+        products.add(new Product(5, "consome de fideos", 6900d));
+        products.add(new Product(6, "Pasta tradicional italiana - Spaghetti", 13800d));
         
     }
     
